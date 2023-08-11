@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify , request 
 from database import load_jobs_from_db , load_job_from_db,add_application_to_db
-from flask_api import status
+
 
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ def listjob():
 def show_job(id):
   job = load_job_from_db(id)
   if not job:
-    return "Not found",status.HTTP_404_NOT_FOUND
+    return "Not found",404
   return render_template("jobtitle.html",job = job)
 @app.route("/contact/")
 def contact():
