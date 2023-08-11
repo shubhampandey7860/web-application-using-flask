@@ -1,12 +1,7 @@
 from sqlalchemy import create_engine, text
-
-# import os
-# db_connection_string = os.environ['DB_CONNECTION_STRING']
-db_connection_string ="mysql+pymysql://zwfb1kkhtwgoqjgad0h3:pscale_pw_cXRjttlD7bCoRkxBOoqlQ0RDhdedHyX2UWg0QQA2zLg@aws.connect.psdb.cloud/flaskdb?charset=utf8mb4"
-
-
-
-engine = create_engine(db_connection_string,
+import os
+my_secret = os.environ['db_connection_string']
+engine = create_engine(my_secret,
                        connect_args={"ssl": {
                          "ssl_ca": "/etc/ssl/cert.pem"
                        }})
