@@ -2,17 +2,29 @@
 <html>
   <head>
     <title>Contact Details</title>
+    {% include 'bootstrap.html' %}
+  
   </head>
   <body>
-   <table border="2px">
-     <tr>
-       <th>Phone no</th>
-       <th>heading<th>
-     </tr>
-     <tr>
-       <td>+91 - 639268739</td>
-       <td>shubhampan7860@gmail.com</td>
-     </tr>
-   </table>
+    <div class="container my-5 center">
+       <table class="table table-sm table-bordered ">
+      <thead>
+        <tr>
+           <th scope="col">#</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a href="tel:+91-6392687390">+91-6392687390</a></td>
+          <td><a href="mailto:shubhampan7860@gmail.com">shubhampan7860@gmail.com</a></td>
+        </tr>
+      </tbody> 
+    </table>   
+    </div>
+      
+      
   </body>
 </html>
